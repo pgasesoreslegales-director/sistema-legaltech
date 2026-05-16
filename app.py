@@ -21,7 +21,7 @@ try:
     MI_API_KEY = st.secrets["GEMINI_API_KEY"]
     genai.configure(api_key=MI_API_KEY)
 except Exception as e:
-    st.error("⚠️ Falta configurar GEMINI_API_KEY en Streamlit Secrets.")
+    st.error(f"⚠️ Error en Credenciales: {e}")
     st.stop()
 
 @st.cache_resource
